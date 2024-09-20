@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.main-text {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.gradient-text {
+    background: linear-gradient(to right, #228B22 0%, #32CD32 50%, #228B22 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typing-container {
+    display: inline-block;
+    position: relative;
+}
+
+.typing-text {
+    display: inline-block;
+    min-width: 1ch;
+}
+
+.typing-text::after {
+    content: '|';
+    position: absolute;
+    right: -0.1em;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
